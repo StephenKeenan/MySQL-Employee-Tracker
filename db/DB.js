@@ -6,8 +6,13 @@ class DB {
     }
 
     // make functions that read,create new, updadte, delete
+    viewDepartments() {
+        return this.connection.query(
+            'SELECT * FROM department;'
+        )
+    }
 
-    createDepartment() {
+    createDepartment(department) {
         return this.connection.query(
             'INSERT INTO department SET ?', department
         )

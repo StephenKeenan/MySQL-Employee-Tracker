@@ -1,3 +1,4 @@
+DROP database IF exists employees;
 CREATE DATABASE employees;
 
 USE employees;
@@ -5,10 +6,10 @@ USE employees;
 CREATE TABLE department (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(30) UNIQUE NOT NULL
-)
+);
 
 CREATE TABLE role (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) UNIQUE NOT NULL,
-    salary DECIMAL UNSIGNED NOT NULL,
-)
+    salary DECIMAL UNSIGNED NOT NULL
+);
